@@ -1,18 +1,4 @@
-'use strict';
 
-const { zokou } = require("../framework/zokou"); // ZOKOU BASE
-const os = require('os');
-const moment = require("moment-timezone");
-const set = require("../set");
-moment.tz.setDefault(set.TIMEZONE || 'Africa/Nairobi');
-
-zokou({
-    nomCom: "bravin",
-    categorie: "Bravin",
-    reaction: "👑",
-    desc: "Show AURA-BXMD bravin base info"
-}, async (dest, zk, commandeOptions) => {
-    const { ms, repondre } = commandeOptions;
     
     const uptime = process.uptime();
     const hours = Math.floor(uptime / 3600);
